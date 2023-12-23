@@ -7,6 +7,9 @@ import { AsideOptions } from '../components/AsideOptions';
 import { SectionProfile } from '../components/SectionProfile';
 import { Button } from '../components/Button';
 import { CourseCard } from '../components/CourseCard';
+import thumb from "@/public/picturesModel/Course1.svg";
+import author from "@/public/picturesModel/PictureProfile.png";
+
 
 const workSans = Work_Sans({ subsets: ['latin'], weight: ['400', '500', '600'] })
 
@@ -51,13 +54,21 @@ export default function Profile() {
           <h4 className='font-semibold text-center mb-4 text-xl'>
             Cursos em andamento:
           </h4>
-          <div className='flex gap-8 flex-wrap justify-center'>
-            <CourseCard type='course' status='progress' />
-            <CourseCard type='test' status='failed' feedbackStars={4} />
-            <CourseCard type='test' status='complete' feedbackStars={2} />
-            <CourseCard type='test' status='to do' feedbackStars={4} />
-            <CourseCard type='test' status='failed' feedbackStars={4} />
+          <div className='flex gap-8 flex-wrap justify-center mb-12'>
+            <CourseCard type='course' status='progress' title="História da Educação I" date={'6/32'} porcentComplete={50} author='Prof. John Wayne' thumbnail={thumb} authorPhoto={author} />
+            <CourseCard type='course' status='progress' title="Filosofia I: Grécia Antiga" date={'6/32'} porcentComplete={50} author='Prof. John Wayne' thumbnail={thumb} authorPhoto={author} />
           </div>
+          <Button href={'/'} color='black' background='white' style={{ border: '1px solid black' }}>Ver todos os cursos em andamento</Button>
+        </SectionProfile>
+        <SectionProfile>
+          <h4 className='font-semibold text-center mb-4 text-xl'>
+            Testes:
+          </h4>
+          <div className='flex gap-8 flex-wrap justify-center mb-12'>
+            <CourseCard type='test' status='to do' title="Economia atual na prática I" feedbackStars={0} author='Prof. John Wayne' thumbnail={thumb} authorPhoto={author} />
+            <CourseCard type='test' status='failed' title="História das Escolas da Economia no Oriente" author='Prof. John Wayne' feedbackStars={5} thumbnail={thumb} authorPhoto={author} />
+          </div>
+          <Button href={'/'} color='black' background='white' style={{ border: '1px solid black' }}>Ver todos os testes</Button>
         </SectionProfile>
 
       </main>
