@@ -3,7 +3,6 @@ import Eye from "@/public/icons/Eye.svg"
 import Share from "@/public/icons/Share.svg"
 import Donwload from "@/public/icons/Download.svg"
 
-
 export function CourseTable() {
     const courses = [
         { title: 'História da Educação I', status: 'Concluído', grade: 100, start: '2023/01/02', end: '2023/11/04', certificate: null },
@@ -42,48 +41,51 @@ export function CourseTable() {
                             </thead>
                             <tbody>
                                 {courses.map((course, index) => (
-                                    <tr key={index}>
-                                        <td className="p-5 bg-[#F5F5F5] border-b-4 border-white ">
+                                    <tr key={index} className="bg-[#F5F5F5]">
+                                        <td className="p-4 border-b-4 border-white">
                                             <div className=" h-full">
                                                 <p className="text-gray-900 whitespace-no-wrap">
                                                     <b>{course.title}</b>
                                                 </p>
                                             </div>
                                         </td>
-                                        <td className="p-5 bg-[#F5F5F5] border-b-4 border-white ">
-                                            <p className={`whitespace-no-wrap ${course.status === 'Concluído' ? 'text-green-500' : course.status === 'Reprovado' ? 'text-red-500' : 'text-gray-900'}`}>
+                                        <td className="p-4 bg-[#F5F5F5] border-b-4 border-white ">
+                                            <p className={`whitespace-nowrap ${course.status === 'Concluído' ? 'text-green-500' : course.status === 'Reprovado' ? 'text-red-500' : 'text-gray-900'}`}>
                                                 {course.status === 'Fazer teste' || course.status === 'Reprovado' || course.status === 'Concluído'
                                                     ? <b>{course.status}</b>
                                                     : course.status
                                                 }
                                             </p>
                                         </td>
-                                        <td className={`p-5 bg-[#F5F5F5] border-b-4 border-white  ${course.grade === null ? 'text-gray-400' : course.grade < 60 ? 'text-red-500' : 'text-green-500'}`}>
-                                            <p className="whitespace-no-wrap">
+                                        <td className={`p-4 bg-[#F5F5F5] border-b-4 border-white  ${course.grade === null ? 'text-gray-400' : course.grade < 60 ? 'text-red-500' : 'text-green-500'}`}>
+                                            <p className="whitespace-nowrap">
                                                 <b>
                                                     {course.grade === null ? '—' : course.grade}
                                                 </b>
                                             </p>
                                         </td>
-                                        <td className="p-5 bg-[#F5F5F5] border-b-4 border-white ">
-                                            <p className="text-gray-900 whitespace-no-wrap">
+                                        <td className="p-4 bg-[#F5F5F5] border-b-4 border-white ">
+                                            <p className="text-gray-900 whitespace-nowrap">
                                                 {course.start}
                                             </p>
                                         </td>
-                                        <td className="p-5 bg-[#F5F5F5] border-b-4 border-white ">
-                                            <p className="text-gray-900 whitespace-no-wrap">
+                                        <td className="p-4 bg-[#F5F5F5] border-b-4 border-white">
+                                            <p className="text-gray-900 whitespace-nowrap">
                                                 {course.end}
                                             </p>
                                         </td>
-                                        <td className="p-5 bg-[#F5F5F5] border-b-4 border-white ">
-                                            <span className={`relative inline-block px-3 py-1 font-semibold ${course.certificate ? 'text-green-900' : 'text-gray-400'} leading-tight`}>
-                                                <span className="relative flex gap-4">
-                                                    <Icon href="/" quality={50} alt="" src={Eye} />
-                                                    <Icon href="/" quality={50} alt="" src={Share} />
-                                                    <Icon href="/" quality={50} alt="" src={Donwload} />
+                                        {course.status !== "Reprovado"
+                                            ? <td className="p-4 bg-[#F5F5F5] border-b-4 border-white">
+                                                <span className={`relative inline-block px-3 py-1 font-semibold ${course.status !== 'Concluído' ? 'opacity-50' : ''}  ${course.certificate ? 'text-green-900' : 'text-gray-400'} leading-tight`}>
+                                                    <span className="relative flex gap-4">
+                                                        <Icon href={course.status === 'Concluído' ? "/" : undefined} quality={50} alt="" src={Eye} />
+                                                        <Icon href={course.status === 'Concluído' ? "/" : undefined} quality={50} alt="" src={Share} />
+                                                        <Icon href={course.status === 'Concluído' ? "/" : undefined} quality={50} alt="" src={Donwload} />
+                                                    </span>
                                                 </span>
-                                            </span>
-                                        </td>
+                                            </td>
+                                            : <td />
+                                        }
                                     </tr>
                                 ))}
                             </tbody>
