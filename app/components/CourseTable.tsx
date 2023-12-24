@@ -1,10 +1,10 @@
-import { Icon } from "../components/Icon";
+import { Icon } from "./Icon";
 import Eye from "@/public/icons/Eye.svg"
 import Share from "@/public/icons/Share.svg"
 import Donwload from "@/public/icons/Download.svg"
 
 
-export default function CourseTable() {
+export function CourseTable() {
     const courses = [
         { title: 'História da Educação I', status: 'Concluído', grade: 100, start: '2023/01/02', end: '2023/11/04', certificate: null },
         { title: 'Filosofia I: Grécia antiga', status: 'Aula 11/32', grade: null, start: '2023/01/02', end: '2023/11/04', certificate: null },

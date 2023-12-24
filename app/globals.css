@@ -24,6 +24,9 @@ html {
   height: 100vh;
 }
 
-input:focus-visible {
+input:focus-visible, div:focus-visible {
   outline: none;
+}
+* {
+  box-sizing: border-box;
 }

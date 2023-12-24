@@ -1,18 +1,16 @@
-import Link from "next/link"
-import { FC, ReactNode } from "react";
-import { Url } from "url";
+'use client'
+import { usePathname } from "next/navigation";
+import { AsideOption } from "./AsideOption";
 
-interface IAsideOptions {
-    href: Url | string;
-    children: ReactNode | string;
-}
-
-export const AsideOptions: FC<IAsideOptions> = ({ href, children }) => {
+export const AsideOptions = () => {
+    const route = usePathname();
     return (
-        <li className='w-full border-b pl-4 pb-1 border-[#A7A7A7]'>
-            <Link href={href}>
-                {children}
-            </Link>
-        </li>
+        <>
+            <AsideOption highlight={route.includes('profile')} href={`${route}/profile`}>Perfil</AsideOption>
+            <AsideOption href={'/'}>Meus Cursos</AsideOption>
+            <AsideOption href={'/'}>Meus Testes</AsideOption>
+            <AsideOption href={'/'}>Meus Artigos</AsideOption>
+            <AsideOption href={'/'}>Pagamento</AsideOption>
+        </>
     )
 }
