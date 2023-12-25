@@ -40,7 +40,7 @@ export default function Courses() {
                 <p className='text-xs'>Continue na sua trilha do conhecimento</p>
             </SectionProfile>
             <SectionProfile>
-                <div className='flex justify-between w-full'>
+                <div className='flex justify-between w-full items-center'>
                     <DropdownFilter title='oi' items={['1', 'dois']} />
                     <span className='text-xs'>MOSTRADO {4} de {4}</span>
                 </div>
