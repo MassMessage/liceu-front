@@ -18,16 +18,16 @@ export const DropdownFilter: FC<IDropdownProps> = ({ title, items }) => {
         <div className="relative z-10" >
             <button
                 type="button"
-                className="px-4 py-2  border border-black focus:outline-none focus:ring w-[300px]"
+                className="px-4 py-2  border border-black focus:outline-none focus:ring w-[300px] flex justify-between items-center"
                 onClick={toggleDropdown}
             >
-                <div className='flex flex-col text-left '>
+                <div className='flex flex-col text-left relative'>
                     <span className='text-xs text-gray-600'>Listar</span>
                     <div className='flex justify-between'>
                         <span>{active} </span>
-                        <Icon src={V} alt='' quality={50} />
                     </div>
                 </div>
+                <Icon src={V} alt='' quality={50} />
             </button>
 
             {isOpen && (
