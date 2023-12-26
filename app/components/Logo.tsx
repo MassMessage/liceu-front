@@ -4,9 +4,9 @@ import Link from 'next/link';
 import { FC } from 'react';
 
 interface ILogo {
-  height: number;
-  minWidth: number;
-  href: string;
+  height?: number;
+  minWidth?: number;
+  href?: string;
 }
 
 export const Logo: FC<ILogo> = ({ height, href, minWidth }) => {
@@ -15,4 +15,10 @@ export const Logo: FC<ILogo> = ({ height, href, minWidth }) => {
       <Image src={LogoSvg} alt='Liceu Libertário' quality={100} height={height} />
     </Link>
   )
+}
+
+Logo.defaultProps = {
+  height: 48,
+  minWidth: 48,
+  href: '/',
 }
