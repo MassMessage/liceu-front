@@ -1,10 +1,9 @@
-import Link from 'next/link'
+import Home from "@/app/home/page";
 
-export default function Home() {
+export default function Root() {
   return (
     <>
-      <Link href={'/login'}>Login</Link>
-      <Link href={'/profile'}>Profile</Link>
+      <Home/>
     </>
   )
 }
