@@ -6,7 +6,7 @@ import { Button } from '../components/Button';
 import { CourseCard } from '../components/CourseCard';
 import thumb from "@/public/picturesModel/Course1.svg";
 import author from "@/public/picturesModel/PictureProfile.png";
-import { CourseTable } from '../components/CourseTable';
+import { CourseTable } from '../components/tables/CourseTable';
 
 const cursos = [
   {

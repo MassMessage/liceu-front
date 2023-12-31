@@ -2,7 +2,7 @@ import { SectionProfile } from '../../components/SectionProfile';
 import thumb from "@/public/picturesModel/Course1.svg";
 import author from "@/public/picturesModel/PictureProfile.png";
 import { CourseCard } from '@/app/components/CourseCard';
-import { DropdownFilter } from '@/app/components/DropdownFilter';
+import { FilterCards } from '@/app/components/FilterCards';
 import Pagination from '@/app/components/Pagination';
 
 export default function Tests() {
@@ -13,10 +13,7 @@ export default function Tests() {
                 <p className='text-xs'>Acompanhe seu progresso</p>
             </SectionProfile>
             <SectionProfile borderNone>
-                <div className='flex justify-between w-full items-center'>
-                    <DropdownFilter title='oi' items={['1', 'dois']} />
-                    <span className='text-xs'>MOSTRADO {4} de {4}</span>
-                </div>
+                <FilterCards title='oi' items={['1', 'dois']} />
                 <h4 className='text-2xl my-8'>
                     <b>Cursos em andamento:</b>
                 </h4>

@@ -14,7 +14,7 @@ interface IPanelDashboard {
 export const PanelDashboard: FC<IPanelDashboard> = ({ children }) => {
     return (
         <>
-            <div className={workSans.className + " flex ml-[10%] mr-[15%] my-10 border basis-full border-[#A7A7A7]"}>
+            <div className={workSans.className + " flex ml-[2.5%] mr-[2.5%] md:ml-[10%] md:mr-[15%] my-10 border basis-full border-[#A7A7A7]"}>
                 <aside className=' px-4 pb-6 pt-12 w-48 border-r border-[#A7A7A7]'>
                     <div className=' flex flex-col text-xs items-center text-center'>
                         <Image src={PictureProfile} alt='Author Photo' className='rounded-full min-w-[6rem] min-h-[6rem] w-6 h-6 mb-6' />

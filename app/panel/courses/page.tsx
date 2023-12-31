@@ -1,10 +1,10 @@
 import { Button } from '@/app/components/Button';
 import { SectionProfile } from '../../components/SectionProfile';
-import { CourseTable } from '@/app/components/CourseTable';
+import { CourseTable } from '@/app/components/tables/CourseTable';
 import thumb from "@/public/picturesModel/Course1.svg";
 import author from "@/public/picturesModel/PictureProfile.png";
 import { CourseCard } from '@/app/components/CourseCard';
-import { DropdownFilter } from '@/app/components/DropdownFilter';
+import { FilterCards } from '@/app/components/FilterCards';
 
 export default function Courses() {
     const arrayFav = [
@@ -40,10 +40,7 @@ export default function Courses() {
                 <p className='text-xs'>Continue na sua trilha do conhecimento</p>
             </SectionProfile>
             <SectionProfile>
-                <div className='flex justify-between w-full items-center'>
-                    <DropdownFilter title='oi' items={['1', 'dois']} />
-                    <span className='text-xs'>MOSTRADO {4} de {4}</span>
-                </div>
+                <FilterCards title='oi' items={['1', 'dois']} />
                 <h4 className='text-2xl my-8'>
                     <b>Cursos em andamento:</b>
                 </h4>
