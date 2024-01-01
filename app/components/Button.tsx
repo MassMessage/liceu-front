@@ -27,3 +27,4 @@ export const Button: FC<IButton> = ({ href, color, background, children, style, 
         </button>
     )
 }
+
