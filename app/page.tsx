@@ -1,4 +1,5 @@
 import Home from "@/app/home/page";
+import Link from "next/link";
 
 export default function Root() {
   return (

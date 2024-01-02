@@ -46,9 +46,9 @@ export const ProfileViewTable: FC<IProfileViewTable> = ({ columns = coursesColum
                                             </div>
                                         </td>
                                         <TableCell>
-                                            <div className="text-center">
+                                            <span className="text-center">
                                                 {course.fav}
-                                            </div>
+                                            </span>
                                         </TableCell>
                                         <TableCell>
                                             {course.publicado}
