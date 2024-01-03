@@ -3,7 +3,6 @@ import { FC } from "react";
 import { Icon } from "./Icon";
 import { Button } from "./Button";
 import { FeedbackStars } from "./FeedbackStars";
-import { fail } from "assert";
 import { Poppins, Work_Sans } from "next/font/google";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
@@ -68,12 +67,12 @@ export const CourseCard: FC<ICourseCard> = ({ type, status, feedbackStars, ...pr
                     : null
                 }
                 <div className="flex justify-between mt-6 h-full">
-                    <div className=" basis-2/3 self-end">
+                    <div className="basis-2/3 self-end">
                         <Button background={statusColor} color="#fff" href={'/'}>
                             <b>{buttonName}</b>
                         </Button>
                     </div>
-                    {type === 'course' && status === 'progress'
+                    {type === 'course' && status === 'progress' && props.porcentComplete
                         ? <div className={workSans.className + " flex flex-col text-right text-sm"}>
                             <span>Aula {props.date}</span>
                             <b>{props.porcentComplete}%</b>

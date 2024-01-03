@@ -40,7 +40,7 @@ export default function Courses() {
                 <p className='text-xs'>Continue na sua trilha do conhecimento</p>
             </SectionProfile>
             <SectionProfile>
-                <FilterCards title='oi' items={['1', 'dois']} />
+                <FilterCards title='Listar' items={['1', 'dois']} />
                 <h4 className='text-2xl my-8'>
                     <b>Cursos em andamento:</b>
                 </h4>
