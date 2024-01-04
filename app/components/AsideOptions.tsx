@@ -10,7 +10,7 @@ export const AsideOptions = () => {
             <AsideOption highlight={route === '/panel/courses'} href={`/panel/courses`}>Meus Cursos</AsideOption>
             <AsideOption highlight={route === '/panel/tests'} href={`/panel/tests`}>Meus Testes</AsideOption>
             <AsideOption highlight={route === '/panel/articles'} href={`/panel/articles`}>Meus Artigos</AsideOption>
-            <AsideOption href={'/'}>Pagamento</AsideOption>
+            <AsideOption highlight={route === '/panel/payments'} href={'/panel/payments'}>Pagamento</AsideOption>
         </>
     )
 }
