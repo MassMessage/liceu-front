@@ -30,8 +30,14 @@ export const ArticlesTable: FC<IArticlesTable> = ({ columns = coursesColumns, co
                             <thead>
                                 <tr>
                                     {columns.map((course, i) =>
-                                        <th key={i} className="px-5 py-3 font-normal text-left text-gray-600 uppercase tracking-wider">
-                                            {course}
+                                        <th key={i} className="px-5 py-3 font-normal text-left text-gray-600 uppercase tracking-wider" style={{ paddingBottom: course !== 'ESTATÍSTICAS' ? '1.75rem' : '0.75rem' }}>
+                                            {course === 'ESTATÍSTICAS' ?
+                                                <div className=" flex flex-col">
+                                                    {course}
+                                                    <span className="text-xs text-center">F / V / A</span>
+                                                </div>
+                                                : course
+                                            }
                                         </th>
                                     )}
                                 </tr>
