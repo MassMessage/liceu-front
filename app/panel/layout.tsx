@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { ReactNode } from 'react'
 import { Header } from '../components/Header'
+import { PanelDashboard } from '../components/PanelDashboard'
 
 export const metadata: Metadata = {
     title: 'Profile',
@@ -15,7 +16,9 @@ export default function RootLayout({
     return (
         <>
             <Header />
-            {children}
+            <PanelDashboard>
+                {children}
+            </PanelDashboard>
         </>
     )
 }
