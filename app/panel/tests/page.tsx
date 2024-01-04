@@ -13,7 +13,7 @@ export default function Tests() {
                 <p className='text-xs'>Acompanhe seu progresso</p>
             </SectionProfile>
             <SectionProfile borderNone>
-                <FilterCards title='oi' items={['1', 'dois']} />
+                <FilterCards title='Listar' items={['1', 'dois']} />
                 <h4 className='text-2xl my-8'>
                     <b>Cursos em andamento:</b>
                 </h4>
