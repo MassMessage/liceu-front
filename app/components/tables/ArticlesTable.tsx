@@ -32,7 +32,7 @@ export const ArticlesTable: FC<IArticlesTable> = ({ columns = coursesColumns, co
                                     {columns.map((course, i) =>
                                         <th key={i} className="px-5 py-3 font-normal text-left text-gray-600 uppercase tracking-wider" style={{ paddingBottom: course !== 'ESTATÍSTICAS' ? '1.75rem' : '0.75rem' }}>
                                             {course === 'ESTATÍSTICAS' ?
-                                                <div className=" flex flex-col">
+                                                <div className=" flex flex-col text-center">
                                                     {course}
                                                     <span className="text-xs text-center">F / V / A</span>
                                                 </div>
@@ -52,7 +52,11 @@ export const ArticlesTable: FC<IArticlesTable> = ({ columns = coursesColumns, co
                                                 </p>
                                             </div>
                                         </td>
-                                        <TableCell> {course.estatistica} </TableCell>
+                                        <TableCell>
+                                            <span className="inline-block w-full text-center">
+                                                {course.estatistica}
+                                            </span>
+                                        </TableCell>
                                         <TableCell> {course.date} </TableCell>
                                         {course.status !== "Reprovado"
                                             ? <td className="p-4 bg-[#F5F5F5] border-b-4 border-white min-w-[180px]">
