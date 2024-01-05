@@ -67,7 +67,6 @@ export default function Articles() {
                     </div>
                 </div>
                 <Pagination totalPages={4} currentPage={2} />
-                <FileUpload></FileUpload>
             </SectionProfile>
         </>
     )

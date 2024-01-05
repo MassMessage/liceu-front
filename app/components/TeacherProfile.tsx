@@ -1,14 +1,7 @@
 import { Poppins } from "next/font/google"
 import Image from "next/image"
-import BillPedroso from "@/public/picturesModel/BillPedroso.svg";
-import BillPedrosoAss from "@/public/picturesModel/BillPedrosoAss.svg";
-import LucasCameron from "@/public/picturesModel/LucasCameron.svg";
-import LucasCameronAss from "@/public/picturesModel/LucasCameronAss.svg";
-import { Button } from "../components/Button";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { FC } from "react";
-
-const poppins = Poppins({ weight: ['400', '300', '600', '800'], subsets: ['latin'] })
 
 interface ITeacherProfile {
     name: string;
