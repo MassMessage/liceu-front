@@ -16,7 +16,7 @@ import { Icon } from "@/app/components/Icon"
 const poppins = Poppins({ weight: ['400', '300', '600', '800'], subsets: ['latin'] })
 const workSans = Work_Sans({ weight: ['400', '300', '600', '800'], subsets: ['latin'] })
 
-export default function ArticlesHome() {
+export default function ArticlesAuthor() {
     return (
         <div>
             <header className={poppins.className + " h-[100px] bg-[#F4B221] flex justify-between gap-4 items-center px-[10%]"}>
@@ -32,24 +32,28 @@ export default function ArticlesHome() {
                     </Button>
                     <div className="ml-8">
                         <Icon minWidth={40} src={SearchWhite} quality={50} alt="" />
+
                     </div>
                 </div>
             </header>
+
             <main className={"max-w-[1100px] mx-auto flex flex-col items-center justify-center mb-36 " + workSans.className}>
-                <h1 className={"text-5xl text-center font-extrabold my-12 " + poppins.className}>Artigos</h1>
-                <div className="relative mb:mb-[5rem] mb-[10rem]">
-                    <Image src={HightLight} alt='' priority />
-                    <div className="absolute bg-white w-[500px] -bottom-[10rem] md:-bottom-20 left-[1rem] md:left-[5rem] shadow-lg rounded-lg p-8">
-                        <Tag>História</Tag>
-                        <h2 className="font-semibold text-2xl my-4 ">O impacto da tecnologia no local de trabalho: como a tecnologia está mudando</h2>
-                        <AuthorProfileInline
-                            name="Json Fancisco"
-                            date="August 20, 2022"
-                            src={JohnWayne}
-                        />
+                <div className="bg-[#F6F6F7] w-full p-8 flex flex-col justify-center rounded-md my-16 mx-4">
+                    <div className="flex gap-4 text-sm items-center text-[#97989F] justify-center">
+                        <Image src={JohnWayne} alt='' width={50} className=" rounded-full" />
+                        <div className="flex flex-col">
+                            <span className="font-medium text-md">João Santos</span>
+                            <span className=" font-light text-xs">Aluno</span>
+                        </div>
                     </div>
+                    <p className="text-sm text-center max-w-[500px] mx-auto mt-4">
+                        Conheça João Santos, um escritor e blogueiro apaixonado por tecnologia e viagens. Jonathan é formado em Ciência da Computação e passou anos trabalhando na indústria de tecnologia, adquirindo uma compreensão profunda do impacto que a tecnologia tem em nossas vidas.
+                    </p>
+
                 </div>
-                <h2 className="text-2xl font text-center mt-10 lg:text-left w-full font-semibold">Últimos artigos</h2>
+                <h2 className="text-2xl font text-center mt-10 lg:text-left w-full font-semibold">
+                    {'João Santos'} colaborou com {21} artigos:
+                </h2>
                 <div className="my-4 flex flex-wrap gap-4 justify-center lg:justify-normal ">
                     <ArticleCard
                         href="/"

@@ -17,7 +17,7 @@ interface IArticleCard {
 
 export const ArticleCard: FC<IArticleCard> = (props) => {
     return (
-        <div className="p-4 rounded-md border border-solid w-[340px]">
+        <div className="p-4 rounded-md border border-solid w-[340px] h-fit">
             <div className="w-full relative mb-4">
                 <Image src={props.src} alt='' />
             </div>
