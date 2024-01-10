@@ -10,6 +10,7 @@ import Avanced from "@/public/picturesModel/Avanced.svg";
 import { Button } from '../components/Button';
 import Description from '../components/Description';
 import Image from 'next/image';
+import { GreekCards } from '../components/GreekCard';
 
 const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla facilisis at vero eros et accusamus et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.'
 
@@ -37,6 +38,9 @@ export default function Panel() {
                 <h4 className='font-semibold text-2xl text-center'>
                     Concluir este curso é requerido para destravar os seguintes cursos de História:
                 </h4>
+                <div className=' my-12'>
+                    <GreekCards />
+                </div>
                 <h5 className='font-semibold text-2xl text-center mb-8'>
                     Legenda dos níveis:
                 </h5>
@@ -75,7 +79,7 @@ export default function Panel() {
                     <Button background='#A8770C' color='white' style={{ width: '30%', minWidth: 180 }}>ARTES</Button>
                 </div>
 
-            </SectionProfile>
+            </SectionProfile >
             <SectionProfile>
 
                 <h4 className='font-semibold text-xl text-center mb-4'>
